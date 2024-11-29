@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老胡笑谈</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="robots" content="noindex,nofollow">
+</head>
+<body>
+    <div id="login-container">
+        <h1>老胡笑谈</h1>
+        <div class="login-form">
+            <input type="text" id="nickname" placeholder="请输入昵称" maxlength="10">
+            <input type="text" id="invite-code" placeholder="请输入邀请码">
+            <button id="join-btn">加入聊天室</button>
+        </div>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <div class="chat-header">
+            <h2>老胡笑谈</h2>
+            <span id="online-users"></span>
+        </div>
+        <div id="messages"></div>
+        <div class="input-area">
+            <div class="emoji-picker">
+                <button id="emoji-btn">😊</button>
+                <div id="emoji-panel" style="display: none;">
+                    <!-- 表情会通过JavaScript动态添加 -->
+                </div>
+            </div>
+            <input type="text" id="message-input" placeholder="输入消息...">
+            <button id="send-btn">发送</button>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
